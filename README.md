@@ -5,7 +5,9 @@ Created 3/31/2019
 Project: Post your Work on GitHub
 
 ### Description
-Describe what your project is about and what it does
+Python script to explore data related to bike share systems for Chicago, New York City, 
+and Washington. The script imports the data and produces descriptive statistics based on
+user input.
 
 ### Files used
 Include the files used
