@@ -110,7 +110,6 @@ def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
-    start_time = time.time()
 
     # display the most common month, unless a month filter was selected
     if len(df['month'].unique()) > 1:
@@ -124,7 +123,6 @@ def time_stats(df):
     # display the most common start hour
     print("The most common start hour was {}.".format(df['Start Time'].dt.hour.mode()[0]))
 
-    print("\nThis took %s seconds.\n" % (time.time() - start_time))
     print('-'*40)
 
 
@@ -132,7 +130,6 @@ def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
 
     print('\nCalculating The Most Popular Stations and Trip...\n')
-    start_time = time.time()
 
     # display most commonly used start station
     print("The most common start station was {}.".format(df['Start Station'].mode()[0]))
@@ -144,7 +141,6 @@ def station_stats(df):
     df['Start End Combination'] = df['Start Station'] + ' to ' + df['End Station']
     print("The most frequent combination of start station and end station trip was {}.".format(df['Start End Combination'].mode()[0]))
 
-    print("\nThis took %s seconds.\n" % (time.time() - start_time))
     print('-'*40)
 
 
@@ -152,7 +148,6 @@ def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
 
     print('\nCalculating Trip Duration...\n')
-    start_time = time.time()
 
     # display total travel time
     print("The total travel time was {}.".format(df['Trip Duration'].sum()))
@@ -161,7 +156,6 @@ def trip_duration_stats(df):
     print("The average travel time was {}.".format(df['Trip Duration'].mean()))
 
 
-    print("\nThis took %s seconds.\n" % (time.time() - start_time))
     print('-'*40)
 
 
@@ -172,7 +166,6 @@ def user_stats(df):
     """
 
     print('\nCalculating User Stats...\n')
-    start_time = time.time()
 
     # Display counts of user types
     subscriber_count = df[df['User Type'] == "Subscriber"]['User Type'].count()
@@ -199,7 +192,6 @@ def user_stats(df):
         print("No birth year data is available.")
 
 
-    print("\nThis took %s seconds.\n" % (time.time() - start_time))
     print('-'*40)
 
 
