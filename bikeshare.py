@@ -229,9 +229,7 @@ def main():
         user_stats(df)
         raw_data_view(df)
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
-        if restart.lower() != 'yes':
-            break
+        break
 
 
 if __name__ == "__main__":
